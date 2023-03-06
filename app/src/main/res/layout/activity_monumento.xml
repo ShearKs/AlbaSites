@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id = "@+id/monumento"
+    android:background="#e67300"
+    tools:context=".MonumentoActivity">
+
+    <TextView
+        android:id="@+id/tituloMonumento"  android:layout_height="20dp"
+      android:layout_width="match_parent"/>
+
+
+    <TextView
+        android:id="@+id/textoMonumento"
+        android:layout_width="381dp"
+        android:layout_height="257dp"
+        android:layout_below="@+id/tituloMonumento"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+
+        android:id="@+id/imagen"
+        android:layout_width="285dp"
+        android:layout_height="231dp"
+        android:layout_below="@+id/textoMonumento"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" />
+
+    <Button
+        android:id="@+id/btnEncuesta"
+        android:layout_width="149dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Encuesta"
+
+        android:textColor="#ffffff" />
+
+</LinearLayout>
