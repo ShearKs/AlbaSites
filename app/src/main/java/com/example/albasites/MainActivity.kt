@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         initReclycerViwe()
 
+        //hola esto es una modificacion
+
 
         texto()
 

@@ -1,6 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.AlbaSites" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- El contenido de las letras en el modo oscuro será negro de forma predeterminada      -->
+        <item name="android:textColor">@color/black</item>
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
