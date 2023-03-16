@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         initReclycerViwe()
 
         //hola esto es una modificacion
-
-
         texto()
 
     }
@@ -34,9 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         val reclycerView = findViewById<RecyclerView>(R.id.recyclerView)
         reclycerView.layoutManager = LinearLayoutManager(this)
-        reclycerView.adapter = AdaptadorMonumento(MonumentosProvider.listaMonu)
-
-
+        reclycerView.adapter = AdaptadorMonumento(this,MonumentosProvider.listaMonu)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -48,7 +44,6 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         var itemId: Int = item.itemId
-
 
         when (itemId) {
             R.id.itemPerfil -> {
@@ -69,9 +64,7 @@ class MainActivity : AppCompatActivity() {
                     this, "Hola sergio como estas,has pulsado el Mapa guapeton",
                     Toast.LENGTH_LONG
                 )
-
             }
-
             else -> {
 
                 Toast.makeText(this, "Ha ocurrido un error!", Toast.LENGTH_LONG)

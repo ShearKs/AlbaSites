@@ -1,14 +1,23 @@
 package com.example.albasites.Adapters
 
+
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.albasites.Models.Monumento
+import com.example.albasites.MonumentoActivity
 import com.example.albasites.R
+import com.example.albasites.controladores.controladorMonu
 
-class AdaptadorMonumento(private var listaMonumentos:List<Monumento>):
+class AdaptadorMonumento(private val contexto: Context, private var listaMonumentos:List<Monumento>):
     RecyclerView.Adapter<CardViewHolder>() {
+
+    private val monumentos: ArrayList<Monumento> = controladorMonu.getMonumentos()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
@@ -23,6 +32,22 @@ class AdaptadorMonumento(private var listaMonumentos:List<Monumento>):
 
         val item = listaMonumentos[position]
         holder.render(item)
+
+
+        holder.itemView.setOnClickListener(View.OnClickListener {
+
+            //No terminado pero es una muestra
+            //val monumento = Monumento("Titulo","descri corta" , 0, 1);
+            //monumentos.add(monumento)
+
+            val intento = Intent(contexto,MonumentoActivity::class.java);
+
+            contexto.startActivity(intento);
+
+
+        })
+
+
 
     }
 
